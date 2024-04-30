@@ -18,6 +18,9 @@
 .pause{
   animation-play-state: paused;
 }
+.custom-bg {
+  @apply bg-background/20 border border-accent/30  border-solid backdrop-blur-[6px] shadow-glass-inset hover:shadow-glass-sm
+}
 }
 
 @keyframes move{
@@ -25,6 +28,6 @@
     transform: translate(0,0);
   }
   100%{
-    transform: translate(10,10);
+    transform: translate(100px,100px);
   }
 }

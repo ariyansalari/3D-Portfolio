@@ -30,7 +30,7 @@ export const NavButton = ({x,y,label,icon,newTab,link}) => {
     <div className='absolute cursor-pointer z-50' style={{
         transform:`translate(${x},${y})`
     }}>
-        <Link className='text-foreground group rounded-full flex items-center justify-center bg-background/20 border border-accent/30  border-solid backdrop-blur-[6px] shadow-glass-inset hover:shadow-glass-sm' href={link} aria-label={label} target={newTab?"_blank":"_self"}>
+        <Link className='text-foreground group rounded-full flex items-center justify-center custom-bg' href={link} aria-label={label} target={newTab?"_blank":"_self"}>
             <span className='relative w-14 h-14 p-4 animate-spin-slow-reverse hover:text-accent group-hover:pause'>
             {getIcon(icon)}
             <span  className='peer bg-transparent absolute top-0 left-0 w-full h-full '/>

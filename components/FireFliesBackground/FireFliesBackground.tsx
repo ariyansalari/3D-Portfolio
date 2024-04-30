@@ -5,15 +5,15 @@ const createFireFly = () => ({
   id: Math.random(),
   top: `${Math.random() * 100}%`,
   left: `${Math.random() * 100}%`,
-  animationDuration: `${Math.random() * +5}s`,
+  animationDuration: `${Math.random() *5 +5}s`,
 });
 export const FireFliesBackground = () => {
-  const [fireflies, setFireflies] = useState([]);
+  const [fireflies, setFireflies] = useState<any>([]);
 
   useEffect(() => {
     const addFireflyPeriodically = () => {
       const newFirefly = createFireFly();
-      setFireflies((currentFireFly) => [
+      setFireflies((currentFireFly:any[]) => [
         ...currentFireFly.slice(-14),
         newFirefly,
       ]);
@@ -25,9 +25,9 @@ export const FireFliesBackground = () => {
   }, []);
   return (
     <div className="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden">
-      {fireflies.map((firefly) => (
+      {fireflies.map((firefly:any) => (
         <div
-          className="absolute rounded-full  w-[20px] h-[20px]  bg-firefly-radial"
+          className="absolute rounded-full  w-[10px] h-[10px]  bg-firefly-radial"
           key={firefly.id}
           style={{
             top: firefly.top,
