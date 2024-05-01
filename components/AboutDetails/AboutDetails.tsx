@@ -17,10 +17,10 @@ export const AboutDetails = () => {
     <section className="py-20 w-full ">
       <div className="grid grid-cols-12 gap-8 w-full">
         <ItemLayout className={"col-span-8 row-span-2  flex-col "}>
-          <h2 className="text-white text-left text-2xl w-full capitalize">
+          <h2 className=" text-left text-2xl w-full capitalize">
             Architect of Enchantment
           </h2>
-          <p className="font-light text-white">
+          <p className="font-light ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
             vitae voluptates. Perspiciatis fuga iusto vitae facere ullam impedit
             quasi, ab et distinctio ipsum, labore ad quod in amet quibusdam
@@ -49,12 +49,7 @@ export const AboutDetails = () => {
             hic eaque eius dignissimos nemo, porro omnis. Unde at recusandae ad
             perferendis dolor facilis quis quia. Corrupti exercitationem,
             aliquam perferendis distinctio mollitia dolorum facere? Harum at
-            dolores repellat dolorem quibusdam sed deserunt recusandae
-            voluptatem assumenda perspiciatis molestias facilis natus ullam,
-            quaerat tempore corporis ex voluptatum ipsa. Totam maiores sit quod
-            dolor quasi, sequi quas. Nam incidunt maxime praesentium corporis
-            magni aperiam omnis doloribus, expedita ullam enim odit accusantium
-            vel sequi repellendus commodi dolorum eligendi eos voluptatem.
+         
           </p>
         </ItemLayout>
         <ItemLayout className={"col-span-4 text-accent"}>
