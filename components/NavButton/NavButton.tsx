@@ -1,6 +1,8 @@
 import { Github, Home, Linkedin, NotebookText, Palette, Phone, Twitter, User } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
+import { ResponsiveComponent } from '..'
+import clsx from 'clsx'
 
 const getIcon =(icon)=>{
 switch(icon){
@@ -25,9 +27,12 @@ switch(icon){
 
 }
 }
-export const NavButton = ({x,y,label,icon,newTab,link}) => {
+export const NavButton = ({x,y,label,icon,newTab,link,labelDirection="right"}) => {
   return (
-    <div className='absolute cursor-pointer z-50' style={{
+    <ResponsiveComponent>
+
+{({size})=>{
+    return size && size >=480 ?   <div className='absolute cursor-pointer z-50' style={{
         transform:`translate(${x},${y})`
     }}>
         <Link className='text-foreground group rounded-full flex items-center justify-center custom-bg' href={link} aria-label={label} target={newTab?"_blank":"_self"}>
@@ -41,7 +46,25 @@ export const NavButton = ({x,y,label,icon,newTab,link}) => {
             
         </Link>
         
+        </div>:<div 
+        
+        className='w-fit cursor-pointer z-50' style={{
+    }}>
+        <Link className='text-foreground group rounded-full flex items-center justify-center custom-bg' href={link} aria-label={label} target={newTab?"_blank":"_self"}>
+            <span className='relative w-10 h-10 xs:w-14 xs:h-14 p-2.5 xs:p-4 hover:text-accent '>
+            {getIcon(icon)}
+            <span  className='peer bg-transparent absolute top-0 left-0 w-full h-full '/>
+            <span className={clsx('absolute hidden peer-hover:block px-2 py-1 left-full  mx-2 top-1/2 -tranlate-y-1/2 bg-background text-foreground text-sm rounded-md  shadow-lg  whitespace-nowrap',labelDirection==='left'?"right-full left-auto":'')}>
+                {label}
+            </span>
+            </span>
+            
+        </Link>
         </div>
+}}
+ 
+    </ResponsiveComponent>
+
 
   )
 }

@@ -4,7 +4,7 @@ const ItemLayout = ({ children, className }) => {
   return (
     <div
       className={clsx(
-        "custom-bg p-8 rounded-xl flex items-center justify-center space-y-8",
+        "custom-bg sm:p-8 p-6 rounded-xl flex items-center justify-center space-y-8",
         className
       )}
     >
@@ -15,12 +15,12 @@ const ItemLayout = ({ children, className }) => {
 export const AboutDetails = () => {
   return (
     <section className="py-20 w-full ">
-      <div className="grid grid-cols-12 gap-8 w-full">
-        <ItemLayout className={"col-span-8 row-span-2  flex-col "}>
-          <h2 className=" text-left text-2xl w-full capitalize">
+      <div className="grid grid-cols-12 xs:gap-6 gap-4 md:gap-8 w-full">
+        <ItemLayout className={" col-span-full lg:col-span-8 row-span-2  flex-col "}>
+          <h2 className=" text-left text-xl md:text-2xl w-full capitalize">
             Architect of Enchantment
           </h2>
-          <p className="font-light ">
+          <p className="font-light text-xs sm:text-sm md:text-base ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
             vitae voluptates. Perspiciatis fuga iusto vitae facere ullam impedit
             quasi, ab et distinctio ipsum, labore ad quod in amet quibusdam
@@ -52,18 +52,18 @@ export const AboutDetails = () => {
          
           </p>
         </ItemLayout>
-        <ItemLayout className={"col-span-4 text-accent"}>
-          <div className=" text-5xl w-full text-left font-semibold">
+        <ItemLayout className={" col-span-full sm:col-span-6 lg:col-span-4 text-accent"}>
+          <div className=" sm:text-5xl text-2xl w-full text-left font-semibold">
             25+ <sub className="font-semibold text-base">clients</sub>
           </div>
         </ItemLayout>
-        <ItemLayout className={"col-span-4 text-accent"}>
-          <div className="text-5xl w-full text-left font-semibold">
+        <ItemLayout className={" col-span-full sm:col-span-6 lg:col-span-4 text-accent"}>
+          <div className="sm:text-5xl text-2xl  w-full text-left font-semibold">
             4+{" "}
             <sub className="font-semibold text-base">years of experience</sub>
           </div>
         </ItemLayout>
-        <ItemLayout className={"col-span-4 !p-0"}>
+        <ItemLayout className={"col-span-full sm:col-span-6  !p-0"}>
           <img
             className="w-full h-auto "
             src="https://github-readme-stats.vercel.app/api/top-langs?username=anuraghazra&show_icons=true&theme=transparent&hide_border=true&title_color=FEFE58&text_color=FFFFFF&icon_color=FEFE58&text_bold=false"
@@ -71,7 +71,7 @@ export const AboutDetails = () => {
             loading="lazy"
           />
         </ItemLayout>
-        <ItemLayout className={"col-span-8 !p-0"}>
+        <ItemLayout className={"col-span-full md:col-span-8 !p-0"}>
           <img
             className="w-full h-auto "
             src="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=transparent&hide_border=true&title_color=FEFE58&text_color=FFFFFF&icon_color=FEFE58&text_bold=false"
@@ -89,7 +89,7 @@ export const AboutDetails = () => {
           />
         </ItemLayout>
 
-        <ItemLayout className={"col-span-6 !p-0"}>
+        <ItemLayout className={"col-span-full sm:col-span-6  !p-0"}>
           <img
             className="h-auto  w-full "
             src="https://github-readme-streak-stats.herokuapp.com?user=ariyansalari&theme=dark&hide_border=true&type=png&background=EB545400&ring=EBE62D&currStreakLabel=EBEB1B"
@@ -98,7 +98,7 @@ export const AboutDetails = () => {
           />{" "}
         </ItemLayout>
 
-        <ItemLayout className={"col-span-6 !p-0"}>
+        <ItemLayout className={"col-span-full sm:col-span-6  !p-0"}>
           <img
             className="w-full h-auto "
             src="https://github-readme-stats.vercel.app/api/pin/?username=ariyansalari&repo=trainProject&show_icons=true&theme=transparent&hide_border=true&title_color=FEFE58&text_color=FFFFFF&icon_color=FEFE58&text_bold=false&description_lines_count=2"
