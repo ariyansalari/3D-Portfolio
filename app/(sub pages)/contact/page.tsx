@@ -8,7 +8,7 @@ export default function Projects() {
     <>
      <Image src={bg} alt="background-image"  className="fixed w-full h-full object-cover object-center -z-50 opacity-25 top-0 left-0"/>
     <article className="relative w-full flex flex-col items-center justify-center space-x-8 py-8 sm:py-0">
-<div className="flex flex-col items-center justify-center space-y-6 w-full  sm:w-3/4 ">
+<div className="flex flex-col items-center justify-center space-y-6 w-full  sm:w-3/4  mb-4">
 <h1 className="text-accent font-semibold text-center text-4xl capitalize">
   summon the wizard
 </h1>

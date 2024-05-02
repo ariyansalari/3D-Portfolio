@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <>
      <Image src={bg} alt="background-image"  className="fixed w-full h-full object-cover object-center -z-50 opacity-25 top-0 left-0"/>
-     <div className='w-full h-3/5 xs:3/4 sm:h-screen absolute top-1/2 -tranlate-y-1/2 lef-0'>
+     <div className='w-full h-1/4 xs:h-1/4 sm:h-screen absolute sm:top-0 top-14 -tranlate-y-1/2 lef-0'>
      <RenderModel className={''} >
         <HatModel />
      </RenderModel>
