@@ -10,7 +10,7 @@ export default function HatModel(props) {
     modelRef.current.rotation.y +=0.007
   })
   return (
-    <group {...props} dispose={null} ref={modelRef} scale={[1.2,1.2,1.2]} rotation={[0.4,-1,0]} position={[0,0,0]}>
+    <group {...props} dispose={null} ref={modelRef} scale={[1.8,1.8,1.8]} rotation={[0.4,-1,0]} position={[0,0,0]}>
       <mesh
         castShadow
         receiveShadow
