@@ -1,2 +1,2 @@
-export * from "./WizardModel"
-export * from "./StaffModel"
+export * from "./PunchManModel"
+export * from "./BmwModel"

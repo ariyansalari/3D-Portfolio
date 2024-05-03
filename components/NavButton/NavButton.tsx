@@ -68,7 +68,7 @@ export const NavButton = ({
           >
             <NavLink
             variants={item}
-              className="text-foreground group rounded-full flex items-center justify-center custom-bg"
+              className="text-foreground group rounded-full flex items-center justify-center custom-bg "
               href={link}
               aria-label={label}
               target={newTab ? "_blank" : "_self"}
@@ -85,8 +85,8 @@ export const NavButton = ({
         ) : (
           <div className="w-fit cursor-pointer z-50" >
                 <NavLink
-            variants={item}
-              className="text-foreground group rounded-full flex items-center justify-center custom-bg"
+                    variants={item}
+                    className="text-foreground group rounded-full flex items-center justify-center custom-bg "
               href={link}
               aria-label={label}
               target={newTab ? "_blank" : "_self"}
