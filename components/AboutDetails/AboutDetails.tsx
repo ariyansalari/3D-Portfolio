@@ -1,17 +1,8 @@
+'use client'
 import React from "react";
 import clsx from "clsx";
-const ItemLayout = ({ children, className }) => {
-  return (
-    <div
-      className={clsx(
-        "custom-bg sm:p-8 p-6 rounded-xl flex items-center justify-center space-y-8",
-        className
-      )}
-    >
-      {children}
-    </div>
-  );
-};
+import { ItemLayout } from ".";
+
 export const AboutDetails = () => {
   return (
     <section className="py-20 w-full ">
