@@ -1,7 +1,10 @@
 import Image from "next/image";
-import bg from '../public/background/home-background.png'
+import bg from '../public/background/homeBackground.avif'
 import { Navigation, RenderModel } from "@/components";
-import WizardModel from "@/components/Models/WizardModel/WizardModel";
+import PunchManModel from "@/components/Models/PunchManModel/PunchManModel";
+import { Metadata } from "next";
+
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative">
@@ -10,8 +13,8 @@ export default function Home() {
       {/*  navigation and 3d model */}
      <Navigation />
 
-<RenderModel className={undefined} >
-  <WizardModel/>
+<RenderModel  >
+  <PunchManModel/>
 </RenderModel>
      </div>
     </main>

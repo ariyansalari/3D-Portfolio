@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import { Canvas } from '@react-three/fiber'
 import { Environment } from '@react-three/drei'
 
-export const RenderModel = ({className,children}) => {
+export const RenderModel = ({className,children}:{className?:string,children:React.ReactNode}) => {
   return (
     // eslint-disable-next-line react/jsx-no-undef
     <Canvas className={clsx('w-screen h-screen relative -z-10',className)}>

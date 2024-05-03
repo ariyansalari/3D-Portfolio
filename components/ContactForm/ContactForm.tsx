@@ -30,12 +30,12 @@ export const ContactForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const sendEmail = (params) => {
+  const sendEmail = (params:any) => {
     const toastId=toast.loading('Sending your message please wait...')
     emailjs
       .send(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMLATE_ID,
+        process.env.NEXT_PUBLIC_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_TEMLATE_ID as string,
         params,
 
         {
@@ -47,12 +47,11 @@ export const ContactForm = () => {
       )
       .then(
         () => {
-       toast.success('I have recieved your message I will get back to you soon!',{
+       toast.success(' I will get back to you soon thanks for your message <3',{
         id:toastId
        })
         },
         (error) => {
-          console.log("FAILED...", error);
        toast.error('There was an error sending your message, please try agian later!',{
         id:toastId
        })
@@ -60,7 +59,7 @@ export const ContactForm = () => {
         }
       );
   };
-  const onSubmit = (data) => {
+  const onSubmit = (data:any) => {
     const templateParams = {
       to_name: "ariyansalari",
       from_name: data.name,
@@ -93,7 +92,7 @@ export const ContactForm = () => {
         })}
         className="w-full p-2  rounded-md shadow-lg text-foreground shadow-lg focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"
       />
-      {errors.name && <span className="inline-block self-start text-accent">{errors.name.message}</span>}
+      {errors.name && <span className="inline-block self-start text-accent">{errors.name.message as string}</span>}
       <motion.input
       variants={item}
 
@@ -102,7 +101,7 @@ export const ContactForm = () => {
         {...register("email", { required: 'this field is required!' })}
         className="w-full p-2  rounded-md shadow-lg text-foreground shadow-lg focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"
       />
-      {errors.email && <span className="inline-block self-start text-accent">{errors.email.message}</span>}
+      {errors.email && <span className="inline-block self-start text-accent">{errors.email.message as string}</span>}
 
       <motion.textarea
       variants={item}
@@ -116,7 +115,7 @@ export const ContactForm = () => {
         }, required: 'this field is required!' })}
         className="w-full p-2  rounded-md shadow-lg text-foreground shadow-lg focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"
       />
-      {errors.message && <span className="inline-block self-start text-accent">{errors.message.message}</span>}
+      {errors.message && <span className="inline-block self-start text-accent">{errors.message.message as string}</span>}
 
       <motion.input
       variants={item}
