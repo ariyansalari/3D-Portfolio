@@ -1,15 +1,26 @@
+'use client'
+import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 
+const item = {
+  hidden: {
+    opacity: 0,y:100
+  },
+  show: {
+    opacity: 1,y:0
+  },
+};
 export const ProjectLayout = ({ name, description, date, demoLink }) => {
+  const NavLink=motion(Link)
   return (
-    <Link href={demoLink} target="_blank" className="flex cursor-pointer items-center justify-between w-full relative rounded-lg overflow-hidden p-6  text-foreground group custom-bg ">
+    <NavLink variants={item} href={demoLink} target="_blank" className=" text-sm md:text-base flex cursor-pointer items-center justify-between w-full relative rounded-lg overflow-hidden p-4 md:p-6  text-foreground group custom-bg ">
       <div className="flex items-center justify-center space-x-2">
         <h2 className="text-foreground">{name}</h2>
-        <p className="text-muted">{description}</p>
+        <p className="text-muted sm:inline-block hidden">{description}</p>
       </div>
       <div className="self-end flex-1 mx-2 mb-1 bg-transparent border border-b border-dashed border-muted" />
-      <p className="text-foreground">{new Date(date).toDateString()}</p>
-    </Link>
+      <p className="text-foreground sm:text-muted">{new Date(date).toDateString()}</p>
+    </NavLink>
   );
 };
