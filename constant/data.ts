@@ -29,7 +29,7 @@ export const projectsData = [
       name: "Devoverflow",
       description: "clerk webhook fullstack nextJs prismjs tailwind shadcn mogoDB nextJs ",
       date: "2024-08-15",
-      demoLink: "https://dev-overflow-ariyansalari.vercel.app/",
+      demoLink: "https://devoverflow-ariyansalari.vercel.app/",
     },
     {
       id: 3,
